@@ -8,11 +8,11 @@ ms:
     storage:
         type: fs
         fs:
-            path: /home/jmx/.ms
+            path: /tmp/.ms
         purge:
             frequency: 30m
-            file: /home/jmx/.ms/.purge
+            file: /tmp/.purge
     keygen: uuid
 #    keygen: human
     registry:
-        location: /home/jmx/.ms/.registry
+        location: /tmp/.ms/.registry

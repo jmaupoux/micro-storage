@@ -1,0 +1,7 @@
+ms:
+  storage:
+    type: fs
+    fs:
+      path: build/tmp/.ms
+    purge:
+      file: build/tmp/.ms/.purge
