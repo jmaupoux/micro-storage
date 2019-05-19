@@ -1,17 +1,19 @@
 package micro.storage.keygen;
 
-import io.micronaut.test.annotation.MicronautTest;
 import org.junit.jupiter.api.Test;
 
-import javax.inject.Inject;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@MicronautTest
 class HumanFriendlyKeygenTest {
 
-    @Inject
-    private Keygen keygen;
+    private Keygen keygen = new HumanFriendlyKeygen();
 
     @Test
     void generate() {
+        String key = keygen.generate();
+
+        assertEquals(8, key.length());
+        assertTrue(key.matches("[0-9a-zA-Z]{8}"));
     }
 }
