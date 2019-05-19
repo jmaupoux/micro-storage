@@ -1,3 +1,7 @@
+micronaut:
+  server:
+    port: -1
+
 ms:
   storage:
     type: fs
